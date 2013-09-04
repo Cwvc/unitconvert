@@ -11,8 +11,10 @@
 #                                    |
 #------------------------------------#
 
+#Imports
 import os
 
+#Generic References
 def clear():
 	os.system('clear')
 
@@ -22,7 +24,7 @@ def main():
 	print(" | Unit Converter |")
 	print(" #----------------#")
 
-#TabCheckers
+#Tab Reference
 def metricCheck(x):
 	print(" #-----------------------------------------------#")
 	if x == '1':
@@ -104,7 +106,13 @@ def metricCheck(x):
                 h = inp * 10        
                 k = inp  
                 display('metric',mm,cm,d,m,da,h,k)
-#TABS
+	else:
+		clear()
+		main()
+		genericError()
+		metric()
+		
+#Tabs
 def metric():
 	print('')
 	print(" #---------------#")
@@ -145,7 +153,12 @@ def display(type,A,B,C,D,E,F,G):
 		clear()
 		main()
 		metric()
-#START APPLICATION
+#Errors
+def genericError():
+	print(' #=ERROR=========================================#')
+	print(' | There was an error in your input, try again.  |')
+	print(' #===============================================#')
+#Start Application
 clear()
 main()
 metric()
