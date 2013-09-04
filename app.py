@@ -41,6 +41,11 @@ def metricCheck(x):
                 print(" | Enter the number in: hectometers (h)          |")
         elif x == '7':
 		print(" | Enter the number in: kilometers (k)           |")
+	else:
+		clear()
+		main()
+		genericError()
+		metric()
 	inp = input(" |  > ")
 	
 	if x == '1':
